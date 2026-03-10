@@ -4,15 +4,18 @@ A Python API client for the [Traderie](https://traderie.com/diablo2resurrected) 
 
 ## Installation
 
+Install from GitHub:
+
 ```bash
-pip install httpx
+pip install git+https://github.com/matthewmpalen/traderie-client.git
 ```
 
-Clone the repository:
+Or clone and install locally:
 
 ```bash
 git clone https://github.com/matthewmpalen/traderie-client.git
 cd traderie-client
+pip install -e .
 ```
 
 ## Quick Start
@@ -193,12 +196,15 @@ except TraderieError as e:
 
 ```
 traderie-client/
-├── traderie_client.py   # Main module (imports everything)
-├── client.py            # TraderieClient (sync)
-├── async_client.py      # AsyncTraderieClient (async)
-├── models.py            # Data models
-├── exceptions.py        # Exception classes
-└── example.py           # Usage examples
+├── pyproject.toml           # Package configuration
+├── README.md
+├── example.py               # Usage examples
+└── traderie_client/         # Package source
+    ├── __init__.py          # Public API exports
+    ├── client.py            # TraderieClient (sync)
+    ├── async_client.py      # AsyncTraderieClient (async)
+    ├── models.py            # Data models
+    └── exceptions.py        # Exception classes
 ```
 
 ## Disclaimer

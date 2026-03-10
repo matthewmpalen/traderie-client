@@ -4,7 +4,7 @@ Traderie API Client for Diablo 2 Resurrected
 A Python client for interacting with the Traderie trading platform API.
 """
 
-from models import (
+from .models import (
     OfferStatus,
     ListingProperty,
     Listing,
@@ -14,13 +14,15 @@ from models import (
     Offer,
     User,
 )
-from exceptions import (
+from .exceptions import (
     TraderieError,
     AuthenticationError,
     RateLimitError,
 )
-from client import TraderieClient
-from async_client import AsyncTraderieClient
+from .client import TraderieClient
+from .async_client import AsyncTraderieClient
+
+__version__ = "0.1.0"
 
 __all__ = [
     # Clients

@@ -4,8 +4,8 @@ Asynchronous Traderie API client.
 
 import httpx
 
-from exceptions import TraderieError, AuthenticationError, RateLimitError
-from models import Listing, Notification, Message, Conversation, Offer, User
+from .exceptions import TraderieError, AuthenticationError, RateLimitError
+from .models import Listing, Notification, Message, Conversation, Offer, User
 
 
 class AsyncTraderieClient:
